@@ -186,24 +186,37 @@ tr:hover {
     text-decoration: none;
 }
 
+/* Contenedor de opciones */
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    padding: 20px;
+    background-color: #3498db;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los enlaces (botones) */
 .opciones a {
-    display: display: inline-block;
-    margin: 0 10px;
+    display: inline-block;
     padding: 10px 20px;
     background-color: #fff;
     color: #3498db;
     border-radius: 4px;
     font-weight: bold;
+    text-align: center;
+    text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+    flex: 1; /* Hace que todos los botones tengan el mismo ancho */
+    max-width: 200px; /* Ancho máximo para evitar que los botones sean demasiado grandes */
 }
-.opciones {
-    text-align: inline-block;
-    padding: 20px;
-    background-color: #3498db;
-    color: #360606;
-    border-radius: 8px;
-    margin: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+/* Efecto hover para los enlaces */
+.opciones a:hover {
+    background-color: #2980b9;
+    color: #fff;
 }
 .tareas {
     padding: 50px 20px;

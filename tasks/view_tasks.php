@@ -65,16 +65,9 @@ try {
     </table>
     </div>
     <div class="opciones">
-    <table>
-        <thead>
-            <tr>
-                <th><a href="create_task.php">Crear Nueva Tarea</a></th>
-                <th> <a href="../users/edit_user.php">Editar Mi Información</a></th>
-                <th><a href="logout.php">Cerrar Sesion</a></th>
-            </tr>
-        </thead>
-    </table>
-    
+        <a href="create_task.php">Crear Nueva Tarea</a>
+        <a href="../users/edit_user.php">Editar Mi Información</a>
+        <a href="logout.php">Cerrar Sesión</a>
     </div>
 </body>
 </html>
