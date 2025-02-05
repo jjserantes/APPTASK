@@ -31,7 +31,7 @@ try {
 </head>
 <body>
     <h1>Mis Tareas</h1>
-    <p><a href="../users/edit_user.php">Editar Mi Información</a></p>
+    <div class="tareas">
     <table>
         <thead>
             <tr>
@@ -51,7 +51,7 @@ try {
                     <td><?php echo htmlspecialchars($task['fecha_creacion']); ?></td>
                     <td><?php echo htmlspecialchars($task['estado']); ?></td>
                     <td>
-                        <a href="edit_task.php?id=<?php echo $task['id']; ?>">Editar</a>
+                        <a href="edit_task.php?id=<?php echo $task['id']; ?>">Editar | </a>
                         <a href="delete_task.php?id=<?php echo $task['id']; ?>">Eliminar</a>
                     </td>
                 </tr>
@@ -63,8 +63,18 @@ try {
             <?php endif; ?>
         </tbody>
     </table>
-    <a href="create_task.php">Crear Nueva Tarea</a>
-    <br>
-    <a href="logout.php">Cerrar Sesion</a>
+    </div>
+    <div class="opciones">
+    <table>
+        <thead>
+            <tr>
+                <th><a href="create_task.php">Crear Nueva Tarea</a></th>
+                <th> <a href="../users/edit_user.php">Editar Mi Información</a></th>
+                <th><a href="logout.php">Cerrar Sesion</a></th>
+            </tr>
+        </thead>
+    </table>
+    
+    </div>
 </body>
 </html>
