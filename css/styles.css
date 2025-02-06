@@ -43,27 +43,8 @@ label {
 }
 
 input[type="text"],
-input[type="password"] 
-{
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
+input[type="password"],
+textarea,
 select {
     width: 100%;
     padding: 0.75rem;
@@ -74,6 +55,7 @@ select {
     box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -190,7 +172,7 @@ tr:hover {
 .opciones {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espacio entre los botones */
+    gap: 20px;
     padding: 20px;
     background-color: #3498db;
     border-radius: 8px;
@@ -198,7 +180,6 @@ tr:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para los enlaces (botones) */
 .opciones a {
     display: inline-block;
     padding: 10px 20px;
@@ -209,15 +190,16 @@ tr:hover {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
-    flex: 1; /* Hace que todos los botones tengan el mismo ancho */
-    max-width: 200px; /* Ancho máximo para evitar que los botones sean demasiado grandes */
+    flex: 1;
+    max-width: 200px;
 }
 
-/* Efecto hover para los enlaces */
 .opciones a:hover {
     background-color: #2980b9;
     color: #fff;
 }
+
+/* Estilos para las tareas */
 .tareas {
     padding: 50px 20px;
     background-color: #3498db;
@@ -302,6 +284,29 @@ tr:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .landing h1 {
+        font-size: 2.5em;
+    }
+
+    .landing p {
+        font-size: 1em;
+    }
+
+    .opciones {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .opciones a {
+        max-width: 100%;
+        width: 100%;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -314,5 +319,38 @@ tr:hover {
 
     .footer-section.contact p {
         justify-content: center;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .landing h1 {
+        font-size: 2em;
+    }
+
+    .landing a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footer-section h3 {
+        font-size: 1.2em;
+    }
+
+    .footer-section p {
+        font-size: 0.8em;
     }
 }
