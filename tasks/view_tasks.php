@@ -11,12 +11,24 @@ if (!isset($_SESSION['user_id'])) {
 // Obtener el ID del usuario actual
 $user_id = $_SESSION['user_id'];
 
-// Consulta para obtener las tareas del usuario
+// Obtener el nombre del usuario
+$stmt_user = $conn->prepare("SELECT nombre FROM users WHERE id = :user_id");
+$stmt_user->bindParam(':user_id', $user_id);
+$stmt_user->execute();
+$user = $stmt_user->fetch(PDO::FETCH_ASSOC);
+
+// Obtener el nombre del usuario
+$stmt_user = $conn->prepare("SELECT username FROM users WHERE id = :user_id");
+$stmt_user->bindParam(':user_id', $user_id);
+$stmt_user->execute();
+$user = $stmt_user->fetch(PDO::FETCH_ASSOC);
+
+// Obtener las tareas del usuario
 try {
-    $stmt = $conn->prepare("SELECT * FROM tasks WHERE user_id = :user_id");
-    $stmt->bindParam(':user_id', $user_id);
-    $stmt->execute();
-    $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt_tasks = $conn->prepare("SELECT * FROM tasks WHERE user_id = :user_id");
+    $stmt_tasks->bindParam(':user_id', $user_id);
+    $stmt_tasks->execute();
+    $tasks = $stmt_tasks->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     die("Error al obtener las tareas: " . $e->getMessage());
 }
@@ -30,7 +42,7 @@ try {
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <h1>Mis Tareas</h1>
+<h1>Mis Tareas - <?php echo htmlspecialchars($user['username']); ?></h1>
     <div class="tareas">
     <table>
         <thead>

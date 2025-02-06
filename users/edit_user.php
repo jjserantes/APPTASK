@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindParam(':id', $user_id);
 
     if ($stmt->execute()) {
-        echo "Usuario actualizado con éxito.";
+        header("Location: ../tasks/view_tasks.php");
     } else {
         echo "Error al actualizar el usuario.";
     }
@@ -60,6 +60,8 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
         <input type="password" id="password" name="password">
         <button type="submit">Actualizar Usuario</button>
     </form>
+    <div class="opciones">
     <a href="../tasks/view_tasks.php">Volver a Mis Tareas</a>
+    </div>
 </body>
 </html>

@@ -47,6 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <option value="Terminada">Terminada</option>
         </select>
         <button type="submit">Crear Tarea</button>
+       
     </form>
+    <div class="opciones">
+    <a href="../tasks/view_tasks.php">Volver a Mis Tareas</a>
+    </div>
 </body>
 </html>
