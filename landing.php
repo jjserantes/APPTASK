@@ -2,9 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Metaetiquetas SEO -->
+    <meta name="description" content="Task Manager es una aplicación web para gestionar tus tareas de manera eficiente. Organiza y optimiza tu productividad al crear y gestionar tareas de manera sencilla.">
+    <meta name="keywords" content="gestión de tareas, productividad, organizar tareas, task manager, aplicación web, productividad personal">
+    <meta name="author" content="Task Manager">
+    <meta name="robots" content="index, follow">
+
+
     <title>Bienvenido a Task Manager</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
 </head>
 <body>
     <div class="landing">
